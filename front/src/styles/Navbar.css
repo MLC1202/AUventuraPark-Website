@@ -1,0 +1,199 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-button {
+  padding: 8px 16px;
+  border: none;
+  background-color: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.15s, color 0.15s;
+  letter-spacing: 0.01em;
+}
+
+.nav-button:hover {
+  background-color: var(--sand);
+  color: var(--forest);
+}
+
+.nav-button-active {
+  background-color: var(--forest-pale);
+  color: var(--forest);
+}
+
+.nav-button-active:hover {
+  background-color: var(--forest-pale);
+  color: var(--forest);
+}
+
+.avatar-wrapper {
+  position: relative;
+  margin-left: 12px;
+}
+
+.avatar-btn {
+  background: var(--sand);
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, background-color 0.15s, border-color 0.15s;
+}
+
+.avatar-btn:hover,
+.avatar-btn-active {
+  background: var(--forest-pale);
+  border-color: var(--forest);
+  transform: scale(1.05);
+}
+
+.avatar-wrapper {
+  position: relative;
+  margin-left: 12px;
+}
+
+.avatar-dropdown-inner {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  min-width: 150px;
+  overflow: hidden;
+  z-index: 300;
+  animation: dropdown-in 0.15s ease;
+}
+
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 12px 18px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--soil);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.dropdown-item:hover {
+  background-color: var(--sand);
+}
+
+.dropdown-item-sair {
+  color: var(--accent);
+}
+
+.dropdown-item-sair:hover {
+  background-color: var(--accent-light);
+}
+
+.nav-button-contato {
+  background-color: var(--forest-pale);
+  color: var(--forest);
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.nav-button-contato:hover {
+  background-color: var(--forest-pale);
+  color: var(--forest);
+  transform: translateY(-1px);
+}
+
+.nav-button-contato {
+  background-color: transparent;
+  color: var(--forest);
+  border: 1px solid rgba(45, 74, 62, 0.28);
+  font-weight: 700;
+  margin-left: 4px;
+  box-shadow: none;
+}
+
+.nav-button-contato:hover {
+  background-color: var(--forest-pale);
+  color: var(--forest);
+  border-color: rgba(45, 74, 62, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Quando a aba Contato estiver realmente selecionada */
+.nav-button-contato.nav-button-active {
+  background-color: #3f6b59;
+  color: var(--white);
+  border-color: #3f6b59;
+  box-shadow: 0 4px 12px rgba(45, 74, 62, 0.16);
+}
+
+.nav-notification-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.15s;
+  position: relative;
+  margin-left: 8px;
+}
+
+.nav-notification-btn:hover {
+  background-color: var(--sand);
+}
+
+.notification-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.notification-icon-wrapper svg {
+  color: var(--muted);
+  transition: color 0.15s;
+}
+
+.nav-notification-btn:hover .notification-icon-wrapper svg {
+  color: var(--forest);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 16px;
+  text-align: center;
+  border: 2px solid var(--white);
+}
